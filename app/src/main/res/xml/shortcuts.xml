@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shortcuts xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <!--
+      Official Google Assistant Built-in Intent (BII) for food intake.
+      Enables natural speech like:
+      "Hey Google, log a turkey sandwich in Logger"
+      "Hey Google, record a turkey sandwich with Logger"
+    -->
+    <capability android:name="actions.intent.RECORD_FOOD_OBSERVATION">
+        <intent
+            android:action="android.intent.action.VIEW"
+            android:targetPackage="com.jacob.voicecalories"
+            android:targetClass="com.jacob.voicecalories.MainActivity">
+            <parameter
+                android:name="foodObservation.aboutFood.name"
+                android:key="meal" />
+        </intent>
+    </capability>
+
+    <!--
+      App Actions custom intent.
+      Matches exact query patterns defined in strings.xml.
+    -->
+    <capability
+        android:name="custom.actions.intent.LOG_FOOD"
+        app:queryPatterns="@array/logFoodQueries">
+        <intent
+            android:action="android.intent.action.VIEW"
+            android:targetPackage="com.jacob.voicecalories"
+            android:targetClass="com.jacob.voicecalories.MainActivity">
+            <parameter
+                android:name="meal"
+                android:key="meal"
+                android:mimeType="https://schema.org/Text" />
+        </intent>
+    </capability>
+
+    <!-- Launcher shortcut: opens the app and starts listening immediately. -->
+    <shortcut
+        android:enabled="true"
+        android:shortcutId="log_food_voice"
+        android:shortcutLongLabel="@string/shortcut_log_food_long"
+        android:shortcutShortLabel="@string/shortcut_log_food">
+        <intent
+            android:action="android.intent.action.VIEW"
+            android:data="voicecalories://listen"
+            android:targetClass="com.jacob.voicecalories.MainActivity"
+            android:targetPackage="com.jacob.voicecalories" />
+        <categories android:name="android.shortcut.conversation" />
+    </shortcut>
+
+</shortcuts>

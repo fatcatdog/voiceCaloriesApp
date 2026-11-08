@@ -1,0 +1,30 @@
+<resources>
+    <string name="app_name">Logger</string>
+    <string name="shortcut_log_food">Log food by voice</string>
+    <string name="shortcut_log_food_long">Speak a meal and log it</string>
+
+    <!--
+      App Actions custom intent query patterns.
+      Matches phrases like: "Hey Google, open Logger and log a turkey sandwich"
+    -->
+    <string-array name="logFoodQueries">
+        <item>log $meal</item>
+        <item>log that I ate $meal</item>
+        <item>log that I am going to eat $meal</item>
+        <item>log that I\'m going to eat $meal</item>
+        <item>log I ate $meal</item>
+        <item>log I am going to eat $meal</item>
+        <item>log I\'m going to eat $meal</item>
+        <item>I ate $meal</item>
+        <item>I am going to eat $meal</item>
+        <item>I\'m going to eat $meal</item>
+        <item>record $meal</item>
+        <item>track $meal</item>
+        <item>add $meal</item>
+        <item>add a meal of $meal</item>
+        <item>add a meal $meal</item>
+        <item>add $meal to my food log</item>
+        <item>add $meal to logger</item>
+        <item>add $meal to my diary</item>
+    </string-array>
+</resources>

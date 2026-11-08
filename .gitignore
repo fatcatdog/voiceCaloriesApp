@@ -1,0 +1,44 @@
+# Gradle and Android build outputs
+.gradle/
+build/
+**/build/
+app/build/
+*.apk
+*.ap_
+*.aab
+*.dex
+
+# Local Android SDK configuration
+local.properties
+
+# Kotlin compiler cache
+.kotlin/
+
+# IDE and editor files
+.idea/
+*.iml
+.idea_modules/
+*.ipr
+*.iws
+.vscode/
+
+# Release signing keys & secrets (CRITICAL: NEVER COMMIT)
+keystore.properties
+upload-keystore.jks
+*.jks
+*.keystore
+*.p12
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Logs and profiling
+captures/
+*.log
+*.hprof
